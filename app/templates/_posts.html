@@ -1,0 +1,16 @@
+{% for post in posts %}
+<div class="postReviewItem">
+	<div class="postReviewContent">
+		<b><a href="{{ url_for('.post',id=post.id,title=post.title) }}">&nbsp;{{ post.title }}</a></b>
+		<p>{{ post.brief }}</p>
+	</div>
+	<div class="postReviewFooter pull-right">
+		<span><span class="footerAuthor">By</span>{{ post.author.name }}</span>
+		<span><span class="glyphicon glyphicon-time"></span>{{ post.formatCreateTime() }}</span>
+	</div>
+</div>
+{% endfor %}
+
+
+
+

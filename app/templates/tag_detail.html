@@ -1,0 +1,25 @@
+{% extends "./base.html" %}
+{% import "./_macros.html" as macros %}
+
+
+{% block title %}<title>标签 > {{ tag.name }}  | 韦艳莹的博客</title>{% endblock %}
+
+{% block page_content %}
+    <div class="pageDiv tagDetailPageDiv">
+        <div class="pageNavigation breadcrumb">
+            <li><a href="{{ url_for('.home') }}"><span class="glyphicon glyphicon-home"></span>&nbsp;首页</a></li>
+            <li><a href="{{ url_for('.tag') }}">标签</a></li>
+            <li class="active">{{ tag.name }}</li>
+        </div>
+        <div class="postReviewAllItem">
+            {% include '_posts.html' %}
+        </div>
+        {% if pagination %}
+        <div class="allPagination">
+            {{ macros.pagination_widget(pagination,'.tag') }}
+        </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+

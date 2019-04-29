@@ -1,0 +1,31 @@
+{% extends "./base.html" %}
+{% import "./_macros.html" as macros %}
+
+
+{% block title %}<title>说说 | 韦艳莹的博客</title>{% endblock %}
+
+
+{% block page_content %}
+	<div class="pageDiv saysomethingPageDiv">
+    	<div class="pageNavigation breadcrumb">
+        	<li><a href="{{ url_for('.home') }}"><span class="glyphicon glyphicon-home"></span>&nbsp;首页</a></li>
+        	<li class="active">说说</li>
+			{% if current_user.is_authenticated %}
+			<li class="active pull-right"></li>
+            <li class="pull-right"><a href="{{ url_for('.new_say') }}">写说说</a></li>
+			{% else %}
+			<li class="active"></li>
+			{% endif %}
+		</div>
+		<div class="saysomethingAllItem">
+			{% include '_says.html' %}
+		</div>
+		{% if pagination %}
+		<div class="allPagination">
+			{{ macros.pagination_widget(pagination,'.say') }}
+		</div>		
+		{% endif %}
+	</div>
+{% endblock %}
+
+

@@ -1,0 +1,9 @@
+		<div class="postReviewAllItem">
+            {% include '_posts.html' %}
+        </div>
+        {% if pagination %}
+        <div class="allPagination">
+            {{ macros.pagination_widget(pagination,'.home') }}
+        </div>
+        {% endif %}
+

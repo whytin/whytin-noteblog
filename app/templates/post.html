@@ -1,0 +1,59 @@
+{% extends "./base.html" %}
+{% import "./_macros.html" as macros %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+{% block title %}<title>{{ post.title }}  |  韦艳莹的博客</title>{% endblock %}
+
+
+{% block page_content %}
+    <div class="pageDiv homePageDiv">
+        <div class="pageNavigation breadcrumb">
+            <li><a href="{{ url_for('.home') }}"><span class="glyphicon glyphicon-home"></span>&nbsp;首页</a></li>
+			<li><a href="{{ url_for('.home') }}">文章</a></li>
+			<li class="active">{{ post.title }}</li>
+        </div>
+		<div class="postHead">
+			<span class="postHeadTitle">{{ post.title }}</span>
+			<span class="postHeadTime">发表于&nbsp;{{ post.formatCreateTime() }}</span>
+			<span class="postHeadTime">更新于&nbsp;{{ post.formatUpdateTime() }}</span>
+			<span class="postHeadRead">阅读: (<span class="postHeadnumber">{{ post.view }}</span>)</span>
+   			<span class="postHeadView">评论: (<span class="postHeadnumber">{{ post.comments.count() }}</span>)</span>
+		</div>
+		<div class="postContent">
+			{% if post.content_html %}
+				{{ post.content_html|safe }}
+			{% else %}
+				{{ post.content }}
+			{% endif %}
+			<div class="postContentFooter">
+			{% if current_user.is_authenticated %}
+                <a class="postContentFooterDelete pull-right" href="{{ url_for('.edit_post',id=post.id,title=post.title) }}">
+                    <span class="glyphicon glyphicon-trash"></span>&nbsp;删除
+                </a>
+                <a class="postContentFooterEdit pull-right" href="{{ url_for('.edit_post',id=post.id,title=post.title) }}">
+                    <span class="glyphicon glyphicon-pencil"></span>&nbsp;编辑
+                </a>
+            {% endif %}
+			</div>
+		</div>
+		<div class="postFooter">
+			<div class="postCommentForm New">
+       			{% include 'comment_form.html' %}
+			</div>
+			<div class="postCommentNumber">
+				<span class="comment-number pull-right">嗨, 共有评论&nbsp;&nbsp;<span class="post-comment-number">{{ post.comments.count() }}</span>&nbsp;&nbsp;条</span>
+			</div>
+			<div class="postCommentAll">
+				{% include '_comments.html' %}
+			</div>
+			{% if pagination %}
+        	<div class="allPagination">
+            	{{ macros.pagination_widget(pagination,'.post',id=post.id,title=post.title) }}
+        	</div>
+        	{% endif %}
+        	<div class="blankblock"></div>
+    	</div>
+	</div>
+{% endblock %}
+
+

@@ -1,0 +1,10 @@
+<form class='NewForm' method="POST" action="">
+	{{ form.hidden_tag() }}
+	<div class="col-md-6" id="comment-editor" >{{ form.email(class="form-control",placeholder=form.email.label.text) }}</div>
+	<div class="col-md-6">{{ form.name(class="form-control",placeholder=form.name.label.text) }}</div>
+	<div style="height:15px;clear:both;"></div>
+	<div class="col-md-12">{{ form.comment(placeholder=form.comment.label.text,rows=8,cols=41,style="width:100%;overflow:auto;word-break:break-all;") }}</div>
+	<div style="height:15px;clear:both;"></div>
+	<div class="col-md-12">{{ form.submit(placeholder=form.submit.label.text,class="btn btn-default") }}</div>
+</form>
+

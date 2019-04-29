@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% block head %}
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script src="../static/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap-3.3.7-dist/css/bootstrap.min.css') }}">
+<script src="../static/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" href="{{ url_for('static',filename='favicon.ico') }}" type="image/x-icon">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles.css') }}"> 
+</head>
+{% endblock %}
+
+{% block body %}
+<body>
+	{% block title %}<title>首页 | 韦艳莹的博客</title> {% endblock %}
+	{% block navbar %} 
+		<nav class="headBar">
+			<div class="headBarLink">
+				<a href="{{ url_for('main.home') }}">Home</a>
+				<a href="{{ url_for('main.technique') }}">Technique</a>
+				<a href="{{ url_for('main.life') }}">Life</a>
+				<a href="{{ url_for('main.say') }}">Say something</a>
+				<a href="{{ url_for('main.tag') }}">Tags</a>
+				<a href="{{ url_for('main.link')}}">Links</a>
+				<a href="{{ url_for('main.about') }}">About</a>
+				{% if current_user.is_authenticated %}
+					<a href="{{ url_for('auth.logout') }}">Log out</a>
+                    <a href="{{ url_for('admin.index')}}">Admin</a>
+				{% else %}
+					<a href="{{ url_for('auth.login') }}">Log in</a>
+				{% endif %}
+			</div>
+		</nav>
+	{% endblock %}
+	{% block content %}
+	<div class="container">
+		{% for message in get_flashed_messages() %}
+    	<div class="alert alert-warning">
+        	<button type="button" class="close" data-dismiss="alert">&times;</button>
+        	{{ message }}
+    	</div>
+	    {% endfor %}
+	    {% block page_content %}{% endblock %}
+	</div>
+	{% endblock %}
+
+	{% block footer %}
+	<div class="footer">
+		<span>© 2017</span>  
+		<span><a href="{{ url_for('main.home') }}" class="footerLink">wakingup.herokuapp.com</a></span>  
+		<span>版权所有-蜀ICP备<a href="http://www.miitbeian.gov.cn/" class="footerLink"> 17032422 </a>号</span>
+	</div>	
+	{% endblock %}
+</body>
+{% endblock %}

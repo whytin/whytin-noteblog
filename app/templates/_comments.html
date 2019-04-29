@@ -1,0 +1,26 @@
+
+{% for comment in comments %}
+<div class="postCommentItem">	
+	<div class="postCommentImage" id="floatingDiv">
+		<span class="comment-image"><img src="../static/about.ipg" class="img-circle" width="70px" /></span>
+		<span class="comment-author">{{ comment.author.name }}</span>
+	</div>
+	<div style="clear:both;"></div>
+	<div class="postCommentContent">
+		<div class="comment-body">
+			{% if comment.content_html %}
+				{{ comment.content_html | safe }}
+            {% else %}
+                {{ comment.content }}
+           	{% endif %}
+       	</div>
+	</div>
+	<div class="postCommentFooter">
+        <span class="comment-time pull-right">{{ comment.formatCreateTime() }}</span>
+		<span class="comment-reply pull-right"><a href="#comment-editor">回复</a></span>
+    </div>
+</div>
+{% endfor %}
+
+
+

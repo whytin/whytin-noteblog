@@ -1,0 +1,25 @@
+{% extends "./base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+
+
+{% block title %}<title>登录 | 韦艳莹的博客</title>{% endblock %}
+
+{% block page_content %}
+<div class="pageDiv loginPageDiv">
+	<div class="pageNavigation breadcrumb">
+		<li><a href="{{ url_for('main.home') }}"><span class="glyphicon glyphicon-home"></span>&nbsp;首页</a></li>
+		<li class="active">登录</li>
+		<li class="active"></li>
+	</div>
+	<div class="loginForm">
+		<div class="col-md-4">
+			{{ wtf.quick_form(form) }}
+		</div>
+		<div class="blankblock"></div>
+	</div>
+</div>
+{% endblock %}
+
+
+
+

@@ -1,0 +1,22 @@
+{% for say in says %}
+<div class="saysomethingItem">
+	<span><img src="../static/about.jpg" class="img-circle" width="50px" /></span> 
+	<p>
+	{% if say.content_html %}
+		{{ say.content_html | safe }}
+	{% else %}
+		{{ say.content }}
+	{% endif %}
+	</p>
+    <div class="saysomethingItemFooter">
+		<span><span class="glyphicon glyphicon-tag"></span>{{ say.formatDate() }}</span>
+		<span><span class="glyphicon glyphicon-time"></span>{{ say.formatTime() }}</span>
+		<span><span class="glyphicon glyphicon-heart-empty"></span>{{ say.like }}</span>
+	</div>	
+</div>
+{% endfor %}
+
+{% block scripts %}
+{{ moment.include_moment() }}
+{% endblock %}
+

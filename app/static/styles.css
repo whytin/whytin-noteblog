@@ -1,0 +1,378 @@
+body {
+	max-width:880px;
+	margin:0px auto;
+	font-size:15px;
+	font-weight:normal;
+	font-family:微软雅黑;
+	font-color:#1A1A1A;
+	background-color:#F2F2F2;
+}
+nav.headBar {
+	max-width:880px;
+	margin:0px auto;
+	height:80px;
+	background-color:#24292E;
+}
+div.headBarLink {
+	padding-top:45px;
+	text-align:center;
+}
+div.headBarLink a {
+	padding:0 12px;
+	font-size:15px;
+	font-weight:700;
+	font-family:微软雅黑;
+	color:#C8C9CA;
+	text-decoration:none;
+}
+div.headBarLink a:hover {
+	color:white;
+}
+div.container {
+    max-width:880px;
+	margin:0px auto;
+	background-color:white !important;
+	padding-bottom:28%;
+}
+div.pageDiv {
+	margin:50px 50px 0px;
+}
+div.errorPage {
+	padding-bottom:20%;
+}
+div.pageNavigation {
+	height:35px;
+	border-bottom:1px solid #D7D7D7;
+	font-size:14px;
+	font-family:微软雅黑;
+}
+div.breadcrumb {
+	background-color:white !important;
+}
+div.pageNavigation a {
+	text-decoration:none;
+	color:#00CCFF;
+}
+div.pageNavigation a:hover {
+	text-decoration:none;
+	color:#00A67C;
+	cursor:pointer;
+}
+div.pageNavigation li.active {
+	color:#CBCBCB;
+}
+div.New {
+	padding:30px 24px 60px;
+}
+div.postCommentNumber {
+	padding:50px 50px 20px 45px;
+}
+span.comment-number {
+	padding-right:19px;
+	color:#CBCBCB;
+}
+span.post-comment-number {
+	color:#FD6767;
+}
+div.postCommentAll {
+	margin:8px 50px 30px 45px;
+	border-top:1px dashed #D7D7D7;
+}
+
+div.postCommentItem {
+	padding:30px 0 30px;
+	border-bottom:1px dashed #D7D7D7;
+}
+
+div#floatingDiv {
+	float:left;
+}
+.comment-body {
+	padding:0px 20px 10px 90px;
+}
+.comment-author {
+	position:relative;
+	left:2px;
+	top:-10px;
+	font-size:15px !important;
+	font-weight:560;
+	color:#999999;
+}
+span.comment-image {
+	padding-left:15px;
+}
+span.comment-reply {
+	padding:0 15px 0 15px;
+}
+span.comment-reply a {
+	color:#ED4226;
+	text-decoration:node;
+}
+span.comment-reply a:hover {
+	color:#00CCFF;
+	text-decoration:underline;
+	cursor:pointer;
+}
+span.comment-time {
+	padding:0 20px 0 15px;
+	color:#CBCBCB;
+}
+
+div.loginForm {
+	margin:0 32%;
+}
+div.col-md-4 {
+	width:250px;
+	padding:35px 0 0;
+	font-size:14px;
+	font-family:微软雅黑;
+}
+div.saysomethingAllItem {
+	margin:0px 1px;
+	padding-bottom:18px;
+	border-bottom:1px solid #D7D7D7;
+}
+div.saysomethingItem {
+	text-align:center;
+	padding:45px 80px;
+	border:2px solid transparent;
+}
+div.saysomethingItem:hover {
+	border-top:2px dashed #D7D7D7;
+	border-bottom:2px dashed #D7D7D7;
+}
+div.saysomethingItem p {
+	font-size:16px;
+}
+div.saysomethingItemFooter>span {
+	margin:0px 2px;
+}
+span.glyphicon-tag {
+	color:#00A67C;
+}
+span.glyphicon-time {
+	color:#00A7EB;
+}
+span.glyphicon-heart-empty {
+	color:#FF6767;
+	padding-right:1px;
+}
+span.glyphicon-heart-empty:hover {
+	cursor:pointer;
+}
+div.aboutContentBrief {
+	padding:30px 0px 30px;
+}
+div.aboutContentBrief span {
+	display:block;
+	text-align:center;
+	padding:8px;
+	font-size:14px;
+}
+span.aboutContentBriefIntroduction {
+	font-size:16px !important;
+	font-weight:bold;
+}
+div.aboutContentDetail {
+	padding:30px 0;
+	border-bottom:1px solid #D7D7D7;
+}
+div.aboutContentDetail div {
+	padding-bottom:60px;
+}
+div.aboutContentDetail span {
+	display:block;
+	text-align:center;
+}
+div.aboutContentDetail span.smallTitle {
+	font-size:15px;
+	font-weight:bold;
+	margin-bottom:4px;
+}
+div.pageDiv div.aboutFooter {
+	margin:10px 10px;
+	padding-bottom:60px;
+}
+span.aboutFooterCopyright a {
+	color:#00A67C;
+	text-decoration:none;
+}
+div.postReviewAllItem {
+	margin:10px 0;
+	border-top:1px dashed #D7D7D7;
+}
+div.postReviewItem {
+	padding:30px 0px 45px;
+	border-bottom:1px dashed #D7D7D7;
+}
+div.postReviewContent b a {
+	margin-left:70px;
+	font-size:16px;
+	font-weight:540;
+	color:#1A1A1A;
+}
+div.postReviewContent b a:hover {
+	color:#00A7EB;
+	font-weight:normal;
+	text-decoration:none;
+	cursor:pointer;
+}
+div.postReviewContent p {
+	padding:5px 12px 15px 12px;
+	font-size:14px;
+	font-family:微软雅黑;
+	color:#484848;
+}
+div.postReviewContent p:hover {
+	cursor:auto;
+}
+div.postReviewFooter {
+	margin-right:13px;
+}
+div.postReviewFooter>span{
+	font-size:14px;
+	color:#C6C6C6;
+	padding:0px 12px;
+}
+div.postReviewFooter span.footerAuthor {
+	font-weight:450;
+	padding-right:5px;
+	color:#F78585 !important;
+}
+div.postReviewFooter span.glyphicon-time {
+	font-size:13px;
+	padding-right:5px;
+	color:#00A7EB !important;
+}
+div.postHead {
+	text-align:center;
+	height:80px;
+}
+span.postHeadTitle {
+	display:block;
+	padding:20px 0 15px;
+	font-size:16px;
+	font-weight:bold;
+	font-family:微软雅黑;
+	color:#2F2F2F;
+}
+span.postHeadTime,span.postHeadRead,span.postHeadView {
+	padding:0px 12px;
+	font-size:14px;
+	color:#999999;
+}
+span.postHeadnumber {
+	color:#FD6767;
+}
+div.postContent {
+	line-height:25px;
+	padding:25px 20px 30px;
+	margin:0 2px;
+	border-top:2px dashed #D7D7D7;
+	border-bottom:2px dashed #D7D7D7;
+	color:#1A1A1A;
+}
+div.postContent p {
+	text-indent:2em;
+}
+div.postContentFooter {
+	padding:0 5px 0 0;
+}
+a.postContentFooterDelete {
+	text-decoration:none;
+	padding-right:5px;
+}
+a.postContentFooterDelete:hover {
+	color:#999999;
+	text-decoration:none;
+}
+a.postContentFooterEdit {
+	text-decoration:none;
+	padding-right:20px;
+}
+a.postContentFooterEdit:hover {
+	color:#00A7EB;
+	text-decoration:none;
+}
+div.postFooter {
+    padding-top:30px;
+}
+
+div.linkAllItem {
+	margin:45px 20px 200px 25px;
+}
+span.linkItem {
+	display:inline-block;
+	width:180px;
+	line-height:50px;
+	margin:0px 26px;
+	text-align:center;
+	border-bottom:1px solid #DEDEDE;
+}
+span.linkItem a {
+	text-decoration:none;
+	font-size:15px;
+	color:#00A67C;
+}
+span.linkItem a:hover {
+	text-decoration:none;
+	color:#00CCFF;
+	cursor:pointer;
+}
+div.labelContent {
+	margin:40px 25px 160px 25px;
+}
+div.labelItem a {
+	display:inline-block;
+	padding:3px 6px;
+	margin:10px 4px;
+	background-color:white;
+	text-align:center;
+	font-size:16px;
+	color:#05A5A0;
+	text-decoration:none;
+	border:1px solid #D7D7D7;
+	border-radius:2px;
+}
+div.labelItem a:hover {
+	background-color:#27CCC0;
+	color:white !important;
+	border:1px solid transparent;
+	cursor:pointer;
+}
+div.allPagination {
+	text-align:center;
+	padding-top:12px;
+	padding-bottom:80px;
+}
+div.footer {
+	max-width:880px;
+	margin:0px auto;
+	padding-top:10px;
+	text-align:center;
+	background-color:#F2F2F2 !important;
+}
+div.footer span {
+	font-size:14px;
+	font-family:微软雅黑;
+	line-height:28px;
+	margin-right:6px;
+	color:#999999;
+}
+a.footerLink {
+	text-decoration:none;
+	color:#C8C8C8;
+}
+
+a.footerLink:hover {
+	color:#2E90FA;
+}
+
+
+
+
+
+
+
+
+

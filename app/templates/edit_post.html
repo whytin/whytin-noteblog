@@ -1,0 +1,31 @@
+{% extends "./base.html" %}
+
+
+{% block head %}
+    {{ super() }}
+    {{ simplemde.css }}
+    {{ simplemde.js }}
+{% endblock %}
+
+{% block title %}<title>修改文章 | 韦艳莹的博客</title>{% endblock %}
+
+{% block page_content %}
+    <div class="pageDiv editPostPageDiv">
+        <div class="pageNavigation breadcrumb">
+            <li><a href="{{ url_for('.home') }}"><span class="glyphicon glyphicon-home"></span>&nbsp;首页</a></li>
+            <li><a href="{{ url_for('.edit_post',id=post.id,title=post.title) }}">改文章</a></li>
+        </div>
+        <div class="New">
+            {% include "post_form.html" %}
+        </div>
+    </div>
+{% endblock %}
+
+
+
+
+
+
+
+
+

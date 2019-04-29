@@ -1,0 +1,10 @@
+venv/
+log/
+*.sqlite
+*.log
+*.swp
+*.pyc
+*.cpf
+.env
+__pycache__
+

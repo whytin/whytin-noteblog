@@ -1,0 +1,55 @@
+{% extends "./base.html" %}
+
+{% block title %}<title>关于 | 韦艳莹的博客</title>{% endblock %}
+
+
+{% block page_content %}
+    <div class="pageDiv aboutPageDiv">
+        <div class="pageNavigation breadcrumb">
+            <li><a href="{{ url_for('.home') }}"><span class="glyphicon glyphicon-home"></span>&nbsp;首页</a></li>
+            <li class="active">关于</li>
+        	<li class="active"></li>
+		</div>
+        <div class="aboutContent">
+			<div class="aboutContentBrief">
+				<span class="aboutContentBriefIntroduction">个 人 简 介</span>
+				<span><img src="../static/about.jpg" class="img-circle" width="100px" /></span>
+				<span>韦艳莹</span>
+				<span>业精于勤荒于嬉，形成于思毁于随</span>
+			</div>
+			<div class="aboutContentDetail">
+				<div class="aboutContentBasic">
+					<span class="smallTitle">\ 基 本 情 况 \</span>
+					<span>女，95后</span>
+					<span>籍贯广西，现居成都</span>
+					<span>努力学习ing,目标Python后端工程师</span>
+				</div>
+				<div class="aboutContentSkill">
+					<span class="smallTitle">\ 技 能 掌 握 \</span>
+					<span>语言：熟悉Python语言,了解C语言</span>
+					<span>cs基础:了解数据结构与算法,操作系统</span>
+					<span>后端：熟悉Flask,MySQL,爬虫</span>
+					<span>前端：了解HTML+CSS+JavaScript,了解Bootstrap,jQuery</span>
+					<span>运维：熟练使用Linux/Git</span>
+				</div>
+				<div class="aboutContentHobby">
+					<span class="smallTitle">\ 我 的 爱 好 \</span>
+					<span>读 书，手 账，跑 步，电 影，美 食</span>
+				</div>
+				<div class="aboutContentBlog">
+					<span class="smallTitle">\ 关于本博客 \</span>
+					<span>自主开发,原创作品</span>
+					<span>个人轻博客,菜园自留地</span>
+					<span>除特别说明，文章转载请注明出处</span>
+				</div>
+				<div class="aboutContentContect">
+					<span class="smallTitle">\ 联 系 方 式 \</span>
+					<span>微信：LUCY78765580，QQ：384698960</span>
+					<span>Github:https://github.com/LUCY78765580</span>	
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+
